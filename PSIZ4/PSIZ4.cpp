@@ -3,11 +3,11 @@
 #include <iomanip>
 #include <cstdlib>
 #include <conio.h>
+#include <algorithm>
 #include <cmath>
 #include <ctime>
 #include <fstream>
 #include <sstream>
-#include <algorithm>
 
 using namespace std;
 
@@ -65,7 +65,6 @@ void utworzPlik(const string nazwaPliku, const int licznik, const char wartosci)
 
         if (nazwaPliku == "t2_plik4.bin") // zamiana 10 bitow dla pliku 4 z testu 2
         {
-
             for (size_t i = 0; i < 10; i++) 
             {
                 do
@@ -81,7 +80,6 @@ void utworzPlik(const string nazwaPliku, const int licznik, const char wartosci)
 
                 } while (kk);
                 lM[i] = temp;
-
             }
             sort(lM, lM + 10);
 
@@ -102,14 +100,11 @@ void utworzPlik(const string nazwaPliku, const int licznik, const char wartosci)
                     plik << innyZnak;
 
                     k++;
-
                 }
                 else {
                     for (k; k < licznik; k++)
                     {
-
                         plik << wartosci;
-
                     }
                 }
             }
@@ -268,14 +263,12 @@ int main(int argc, char* argv[])
             case '4':
             {
                 //test 3
-                /*
                 utworzPlik("t3_plik5.bin", 419430400, 0x55);
                 utworzPlik("t3_plik6.bin", 419430400, 0x50);
                 zapiszL("Obliczanie danych dla plikow.");
                 wynik = oblicz("t3_plik5.bin", "t3_plik6.bin");
                 drukowanieWynikow(wynik);
                 zamknijL();
-                */
             }
             break;
 

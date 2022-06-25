@@ -24,3 +24,16 @@ Ilosc bledow: 20
 Czas obliczen: 0 sec 
 
 T: Sat Jun 25 14:45:31 2022 M: Zamknieto plik z logami.
+T: Sat Jun 25 14:57:26 2022 M: Otwarto plik z logami.
+T: Sat Jun 25 14:58:45 2022 M: Utworzono plik: t3_plik5.bin
+
+T: Sat Jun 25 14:59:59 2022 M: Utworzono plik: t3_plik6.bin
+
+T: Sat Jun 25 14:59:59 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:04:14 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0.25
+Ilosc bitow: 3.35544e+09
+Ilosc bledow: 8.38861e+08
+Czas obliczen: 255.019 sec 
+
+T: Sat Jun 25 15:04:14 2022 M: Zamknieto plik z logami.
