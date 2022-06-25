@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#pragma warning(disable : 4996)
+#include <iostream>
 #include <iomanip>
 #include <cstdlib>
 #include <conio.h>
@@ -11,6 +12,20 @@
 using namespace std;
 
 fstream logPlik;
+
+
+void zapiszL(string msg) //zapisanie informacji do pliku z logami i wyswietlenie wiadomosci
+{
+    string t;
+    time_t currentTime = time(NULL);
+    string txttime = (string)asctime(localtime(&currentTime));
+    txttime = txttime.substr(0, txttime.length() - 1);
+    t = (string)"T: " + txttime + " M: " + msg + "\n";
+    logPlik << t.c_str();
+    logPlik.flush();
+    cout << t.c_str();
+    cout.flush();
+}
 
 void otworzL(string plikNazwa) //otworzenie pliku z logami
 {
@@ -28,20 +43,7 @@ void zamknijL(void) //zamkniecie pliku z logami
     logPlik.close();
 }
 
-void zapiszL(string msg) //zapisanie informacji do pliku z logami i wyswietlenie wiadomosci
-{
-    string t;
-    time_t currentTime = time(NULL);
-    string txttime = (string)asctime(localtime(&currentTime));
-    txttime = txttime.substr(0, txttime.length() - 1);
-    t = (string)"T: " + txttime + " M: " + msg + "\n";
-    logPlik << t.c_str();
-    logPlik.flush();
-    cout << t.c_str();
-    cout.flush();
-}
-
-void tworzeniePlikow(const string nazwaPliku, const int licznik, const char wartosci) //utworzenie pliku oraz zamiana 10 bitow dla pliku do testu nr 2
+void utworzPlik(const string nazwaPliku, const int licznik, const char wartosci) //utworzenie pliku oraz zamiana 10 bitow dla pliku do testu nr 2
 {
     srand(time(NULL));
     ifstream mojPlik;
@@ -55,16 +57,16 @@ void tworzeniePlikow(const string nazwaPliku, const int licznik, const char wart
     mojPlik.open(nazwaPliku);
     if (mojPlik)
     {
-        zapiszL("- pominięto tworzenie pliku: " + nazwaPliku + " | plik już istnieje.\n");
+        zapiszL("Plik " + nazwaPliku + " już istnieje.\n");
     }
     else {
 
         ofstream plik(nazwaPliku);
 
-        if (nazwaPliku == "t2_plik4.bin") 
+        if (nazwaPliku == "t2_plik4.bin") // zamiana 10 bitow dla pliku 4 z testu 2
         {
 
-            for (size_t i = 0; i < 10; i++)
+            for (size_t i = 0; i < 10; i++) 
             {
                 do
                 {
@@ -112,6 +114,14 @@ void tworzeniePlikow(const string nazwaPliku, const int licznik, const char wart
                 }
             }
         }
+        else 
+        {
+
+            for (size_t i = 0; i < licznik; i++)
+            {
+                plik << wartosci;
+            }
+        }
 
         string log = "Utworzono plik: " + nazwaPliku + "\n";
 
@@ -122,17 +132,6 @@ void tworzeniePlikow(const string nazwaPliku, const int licznik, const char wart
 
 }
 
-/*
-void utworzPlik(const string name, const int count, const char value)
-{
-    fstream f;
-    f.open(name.c_str(), ios::binary | ios::out);
-    for (int i = 0; i < count; i++)
-    {
-        f.write((char*)&value, 1);
-    }
-    f.close();
-}*/
 
 struct wynikiBER //struktura przechowujaca wyniki dla BER
 {
@@ -215,7 +214,7 @@ int main(int argc, char* argv[])
     if (argc != 3)
     {
         char wybor;
-        while (true)
+        while (true) //menu
         {
             cout << " Wybierz opcje wciskajac odpowiednia cyfre na klawiaturze: " << endl << endl
                 << " 1: Oblicz BER dla wlasnych plikow podajac ich sciezki." << endl
@@ -230,7 +229,6 @@ int main(int argc, char* argv[])
             {
             case '1':
             {
-                /*
                 cout << " Podaj sciezke do pierwszego pliku: ";
 			    cin >> sciezka1;
 			    cout << " Podaj sciezke do drugiego pliku: ";
@@ -240,31 +238,48 @@ int main(int argc, char* argv[])
                 wynik = oblicz(sciezka1, sciezka2);
                 drukowanieWynikow(wynik);
                 zamknijL();
-                */
             }
             break;
 
             case '2':
             {
                 //test 1
-                //tworzeniePlikow("t1_plik1.bin", 100, 0x55);
-                //tworzeniePlikow("t1_plik2.bin", 100, 0x55);
-
+                /*
+                utworzPlik("t1_plik1.bin", 100, 0x55);
+                utworzPlik("t1_plik2.bin", 100, 0x55);
+                zapiszL("Obliczanie danych dla plikow.");
+                wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
+                drukowanieWynikow(wynik);
+                zamknijL();
+                */
             }
             break;
 
             case '3':
             {
-                //tworzeniePlikow("t2_plik3.bin", 100, 0x55);
-                //tworzeniePlikow("t2_plik4.bin", 100, 0x55);
+                //test 2
+                /*
+                utworzPlik("t2_plik3.bin", 100, 0x55);
+                utworzPlik("t2_plik4.bin", 100, 0x55);
+                zapiszL("Obliczanie danych dla plikow.");
+                wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
+                drukowanieWynikow(wynik);
+                zamknijL();
+                */
             }
             break;
 
             case '4':
             {
                 //test 3
-                //tworzeniePlikow("t3_plik5.bin", 1024 * 1024 * 400, 0x55);
-                //tworzeniePlikow("t3_plik6.bin", 1024 * 1024 * 400, 0x50);
+                /*
+                utworzPlik("t3_plik5.bin", 419430400, 0x55);
+                utworzPlik("t3_plik6.bin", 419430400, 0x50);
+                zapiszL("Obliczanie danych dla plikow.");
+                wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
+                drukowanieWynikow(wynik);
+                zamknijL();
+                */
             }
             break;
 
