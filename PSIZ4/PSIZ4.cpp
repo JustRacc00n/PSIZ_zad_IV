@@ -7,7 +7,7 @@
 #include <ctime>
 #include <fstream>
 #include <sstream>
-#include<algorithm>
+#include <algorithm>
 
 using namespace std;
 
@@ -57,7 +57,7 @@ void utworzPlik(const string nazwaPliku, const int licznik, const char wartosci)
     mojPlik.open(nazwaPliku);
     if (mojPlik)
     {
-        zapiszL("Plik " + nazwaPliku + " już istnieje.\n");
+        zapiszL("Plik " + nazwaPliku + " juz istnieje.\n");
     }
     else {
 
@@ -250,21 +250,18 @@ int main(int argc, char* argv[])
                 wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
                 drukowanieWynikow(wynik);
                 zamknijL();
-
             }
             break;
 
             case '3':
             {
                 //test 2
-                /*
                 utworzPlik("t2_plik3.bin", 100, 0x55);
                 utworzPlik("t2_plik4.bin", 100, 0x55);
                 zapiszL("Obliczanie danych dla plikow.");
-                wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
+                wynik = oblicz("t2_plik3.bin", "t2_plik4.bin");
                 drukowanieWynikow(wynik);
                 zamknijL();
-                */
             }
             break;
 
@@ -275,7 +272,7 @@ int main(int argc, char* argv[])
                 utworzPlik("t3_plik5.bin", 419430400, 0x55);
                 utworzPlik("t3_plik6.bin", 419430400, 0x50);
                 zapiszL("Obliczanie danych dla plikow.");
-                wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
+                wynik = oblicz("t3_plik5.bin", "t3_plik6.bin");
                 drukowanieWynikow(wynik);
                 zamknijL();
                 */
