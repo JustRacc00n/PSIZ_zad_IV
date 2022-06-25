@@ -1,0 +1,13 @@
+T: Sat Jun 25 14:12:55 2022 M: Otwarto plik z logami.
+T: Sat Jun 25 14:12:57 2022 M: Utworzono plik: t1_plik1.bin
+
+T: Sat Jun 25 14:12:57 2022 M: Utworzono plik: t1_plik2.bin
+
+T: Sat Jun 25 14:12:57 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 14:12:57 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0
+Ilosc bitow: 800
+Ilosc bledow: 0
+Czas obliczen: 0.001 sec 
+
+T: Sat Jun 25 14:12:57 2022 M: Zamknieto plik z logami.

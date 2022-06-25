@@ -244,14 +244,13 @@ int main(int argc, char* argv[])
             case '2':
             {
                 //test 1
-                /*
                 utworzPlik("t1_plik1.bin", 100, 0x55);
                 utworzPlik("t1_plik2.bin", 100, 0x55);
                 zapiszL("Obliczanie danych dla plikow.");
                 wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
                 drukowanieWynikow(wynik);
                 zamknijL();
-                */
+
             }
             break;
 
