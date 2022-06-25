@@ -37,3 +37,71 @@ Ilosc bledow: 8.38861e+08
 Czas obliczen: 255.019 sec 
 
 T: Sat Jun 25 15:04:14 2022 M: Zamknieto plik z logami.
+T: Sat Jun 25 15:25:37 2022 M: Otwarto plik z logami.
+T: Sat Jun 25 15:25:39 2022 M: Plik t1_plik1.bin juz istnieje.
+
+T: Sat Jun 25 15:25:39 2022 M: Plik t1_plik2.bin juz istnieje.
+
+T: Sat Jun 25 15:25:39 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:39 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0
+Ilosc bitow: 800
+Ilosc bledow: 0
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:42 2022 M: Plik t2_plik3.bin juz istnieje.
+
+T: Sat Jun 25 15:25:42 2022 M: Plik t2_plik4.bin juz istnieje.
+
+T: Sat Jun 25 15:25:42 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:42 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0.025
+Ilosc bitow: 800
+Ilosc bledow: 20
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:44 2022 M: Plik t1_plik1.bin juz istnieje.
+
+T: Sat Jun 25 15:25:44 2022 M: Plik t1_plik2.bin juz istnieje.
+
+T: Sat Jun 25 15:25:44 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:44 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0
+Ilosc bitow: 800
+Ilosc bledow: 0
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:45 2022 M: Plik t2_plik3.bin juz istnieje.
+
+T: Sat Jun 25 15:25:45 2022 M: Plik t2_plik4.bin juz istnieje.
+
+T: Sat Jun 25 15:25:45 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:45 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0.025
+Ilosc bitow: 800
+Ilosc bledow: 20
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:46 2022 M: Plik t1_plik1.bin juz istnieje.
+
+T: Sat Jun 25 15:25:46 2022 M: Plik t1_plik2.bin juz istnieje.
+
+T: Sat Jun 25 15:25:46 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:46 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0
+Ilosc bitow: 800
+Ilosc bledow: 0
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:46 2022 M: Plik t2_plik3.bin juz istnieje.
+
+T: Sat Jun 25 15:25:46 2022 M: Plik t2_plik4.bin juz istnieje.
+
+T: Sat Jun 25 15:25:46 2022 M: Obliczanie danych dla plikow.
+T: Sat Jun 25 15:25:46 2022 M: Program uzyskal nastepujace wyniki obliczen: 
+Bit Error Rate: 0.025
+Ilosc bitow: 800
+Ilosc bledow: 20
+Czas obliczen: 0 sec 
+
+T: Sat Jun 25 15:25:53 2022 M: Zamknieto plik z logami.

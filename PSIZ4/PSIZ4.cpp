@@ -232,7 +232,6 @@ int main(int argc, char* argv[])
                 zapiszL("Obliczanie danych dla plikow.");
                 wynik = oblicz(sciezka1, sciezka2);
                 drukowanieWynikow(wynik);
-                zamknijL();
             }
             break;
 
@@ -244,7 +243,6 @@ int main(int argc, char* argv[])
                 zapiszL("Obliczanie danych dla plikow.");
                 wynik = oblicz("t1_plik1.bin", "t1_plik2.bin");
                 drukowanieWynikow(wynik);
-                zamknijL();
             }
             break;
 
@@ -256,7 +254,6 @@ int main(int argc, char* argv[])
                 zapiszL("Obliczanie danych dla plikow.");
                 wynik = oblicz("t2_plik3.bin", "t2_plik4.bin");
                 drukowanieWynikow(wynik);
-                zamknijL();
             }
             break;
 
